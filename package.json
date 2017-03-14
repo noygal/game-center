@@ -1,0 +1,45 @@
+{
+  "name": "game-center",
+  "version": "1.0.0",
+  "description": "Console like game center",
+  "main": "src/electron/main.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "tape src/**/*.test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/noygal/game-center.git"
+  },
+  "keywords": [
+    "game",
+    "launcher",
+    "console"
+  ],
+  "author": "Gal Noy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/noygal/game-center/issues"
+  },
+  "homepage": "https://github.com/noygal/game-center#readme",
+  "devDependencies": {
+    "electron": "^1.6.2",
+    "electron-devtools-installer": "^2.1.0",
+    "eslint-config-standard": "^7.0.1",
+    "eslint-config-standard-react": "^4.3.0",
+    "standard": "^9.0.1"
+  },
+  "dependencies": {
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.24.0",
+    "babel-preset-es2015": "^6.24.0",
+    "babel-preset-react": "^6.23.0",
+    "babel-register": "^6.24.0",
+    "baobab": "^2.4.3",
+    "fs-promise": "^2.0.0",
+    "material-ui": "^0.17.1",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2",
+    "react-tap-event-plugin": "^2.0.1",
+    "thegamesdb": "^0.1.2"
+  }
+}
