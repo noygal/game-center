@@ -8,6 +8,7 @@ import App from '../components/app'
 import MainView from '../components/main-view'
 import Game from '../components/game'
 import AddGame from '../components/add-game'
+import GameEditModal from '../components/modals/game-edit'
 
 
 const scrapper = require('thegamesdb')
@@ -17,7 +18,7 @@ const scrapper = require('thegamesdb')
 class AppContainer extends Component {
   constructor (props) {
     super(props)
-    this.state = {games: []}
+    this.state = {games: [], editGame: false}
   }
 
   componentDidMount () {
@@ -31,20 +32,27 @@ class AppContainer extends Component {
   }
 
   newGame () {
+    this.setState({gameEdit: true})
     scrapper.getGame({id: 1})
     .then(game => this.setState({games: this.state.games.concat([game])}))
   }
 
   render () {
-    const {games = []} = this.state
+    const {games = [], gameEdit} = this.state
     return (
       <App>
-        <MainView>
-          {
-            games.map((game, i) => <Game key={i} {...game} />)
-          }
-          <AddGame newGame={this.newGame.bind(this)} />
-        </MainView>
+        <div>
+          <GameEditModal
+            title='Add Game'
+            open={gameEdit || false}
+            onRequestClose={this.handleClose} />
+          <MainView>
+            {
+              games.map((game, i) => <Game key={i} {...game} />)
+            }
+            <AddGame newGame={this.newGame.bind(this)} />
+          </MainView>
+        </div>
       </App>
     )
   }

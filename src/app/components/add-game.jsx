@@ -8,7 +8,7 @@ const AddGame = props => (
   <div style={styles.grid.addBox}>
     <Paper style={styles.game.container}>
       <LibAdd style={{width: '7rem', height: '7rem', marginLeft: '3.5rem', marginTop: '7rem'}}
-        onClick={props.newGame} />
+        onTouchTap={props.newGame} />
     </Paper>
   </div>
 )
