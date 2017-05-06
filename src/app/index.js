@@ -3,6 +3,7 @@ const ReactDOM = require('react-dom')
 const App = require('./containers/app').default
 // const State = require('./state').State
 // const Baobab = require('baobab')
+const core = require('../core')
 
 const state = null
 // new Baobab({

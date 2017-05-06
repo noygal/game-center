@@ -41,9 +41,12 @@
     </script>
     <script>
       require('babel-register')({
-        extensions: ['.jsx'],
-        presets: ['react'],
-        plugins: ['transform-es2015-modules-commonjs']
+        extensions: ['.js', '.jsx'],
+        // presets: ['react'],
+        // plugins: [
+        //   'transform-decorators',
+        //   'transform-es2015-modules-commonjs',
+        //   ]
       })
       require('../src/app')
     </script>

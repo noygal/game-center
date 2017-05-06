@@ -13,8 +13,6 @@ import GameEditModal from '../components/modals/game-edit'
 
 const scrapper = require('thegamesdb')
 
-
-
 class AppContainer extends Component {
   constructor (props) {
     super(props)
