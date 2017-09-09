@@ -10,7 +10,6 @@ import Game from '../components/game'
 import AddGame from '../components/add-game'
 import GameEditModal from '../components/modals/game-edit'
 
-
 const scrapper = require('thegamesdb')
 
 class AppContainer extends Component {
